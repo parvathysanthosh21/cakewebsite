@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: white;
     display: flex;
@@ -11,12 +14,9 @@ body{
 .conatiner{
     background-color: white;
     width: 95%;
-    height: 480vh;
+    height: 465vh;
 }
-/* .logo{
-    width: 150px;
-    height: 150px;
-} */
+
 .navbar{
     width: 80%;
 display: flex;
@@ -37,6 +37,13 @@ margin: 0px 20px;
 text-decoration: none;
 color: black;
 font-weight: bold;
+}
+.link:hover{
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    transition: .3s;
 }
 .icon{
     display:inline;
@@ -87,6 +94,12 @@ color: white;
 #shop:hover{
     color: black;
 }
+.new{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 18px;
+}
 .second{
     display: flex;
     justify-content: space-evenly;
@@ -97,12 +110,15 @@ color: white;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    
+    padding: 30px;
 }
-
+.items:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+}
 .items img{
-    width:350px;
-    height: 400px;
+    width:250px;
+    height: 300px;
+   
 }
 .items h3,a{
 margin: 10px;
@@ -114,40 +130,84 @@ color: black;
     color: white;
     padding: 5px;
     border-radius: 5px;
+}
+.items a:hover{
+border:1px solid black ;
+color: black;
+background-color: white;
+}
+.diff h1{
+    font-size: 40px;
+    text-align: center;
+}
+.diff h3{
+    font-size: 20px;
+    color: grey;
+    text-align: center;
+}
+.diff h3:hover{
+    font-size: 25px;
+    transition: .4s;
+}
+.browse{
+     display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+.variety{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 30px; 
+}
+.variety img{
+    width:250px;
+    height: 250px; 
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+    margin-bottom: 10px;
 
 }
-/* .items a:hover{
+.variety img:hover{
+  transform: scale(1.06);
+    transition: .5s;
+    cursor: pointer;
+}
 
-    color: black;
-    background-color: white;
-    border: 2px;
-} */
+
 .offer img{
     width: 100%;
     height: 600px;
-    
-}
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
 .offer-container{
     position: relative;
 }
 .offer-content{
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 70%;
     transform: translate(-50%,-45%);
 }
 .offer-content h3{
-    font-size: 80px;
-    color: whitesmoke;
+    font-size: 40px;
+    color: white;
     margin-top: -100px;
 }
-.offer-content p{
-    color: #ffffff;
-    text-align: justify;
-    margin: 20px;
-    font-size: 20px;
-    font-weight:bolder;  
-} 
+.offer-content h4{
+    font-size:40px ;
+    color: white;
+}
+.offer-content button{
+  padding: 10px; 
+font-weight: bold;
+}
+.code{
+    background-color: transparent;
+}
+.yummy{
+background-color: white;
+}
 .offer-content a{
     /* background-color: black; */
     color: white;
@@ -159,8 +219,13 @@ color: black;
     
 }
 .offer-content a:hover{
-    background-color: black;
+    background-color: white;
+    color: black;
 }
+.itypes{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+}
+
 .types{
     text-align: center;
     margin-top: 30px;
@@ -175,62 +240,142 @@ color: black;
     font-family: 'Kanit', sans-serif;
 }
 .type-img{
+
     margin: 30px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    /* background-color: black; */
     gap: 50px;
     text-align: center;
 }
 .type-img img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
-,
+.type-img img:hover{
+    width: 220px;
+    height: 220px;
+transition: .3s;
+cursor: pointer;
+}
+.itypes{
+    height: 45vh;
+    line-height: 1.5rem;
+}
+
+.itypes .cart{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+}
+.itypes .cart:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
 .itypes span{
 color: orange;
 margin: 20px;
 font-weight: bolder;
 }
+.itypes i{
+    color: red;
+}
 .about-img img{
     width: 100%;
     height: 600px;
-}
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;}
 .about-container{
     position: relative;
 }
 .about-content{
     position: absolute;
     top: 35%;
-    left: 65%;
+    left: 25%;
     transform: translate(-65%,-45%);
-    color: white;
+    color: black;
     
 }
+.about-content h4{
+font-size: 50px;
+line-height: 3rem;
+}
 .about-content h3{
-    font-size: 60px;
+    font-size: 25px;
+    margin-bottom: 70px;
 }
 .about-content a{
     display: inline-block;
 background-color: white;
-margin: 90px 0px;
+margin: 50px 0px;
 padding: 10px 40px;
 border: white solid 2px;
 border-radius: 5px;
 }
 .about-content a:hover{
     background-color: transparent;
+    color: black;
+}
+footer{
+    background-color: black;
+    height: 300px;
     color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: repeat(3,1frm);
+}
+footer .special{
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 1.9rem;
+}
+footer .special img{
+    width: 60px;
+  border-radius: 50%;
+ 
+}
+footer .special img:hover{
+    transform: scale(1.8);
+    transition: 1.2s;
+}
+footer .linkrs h1{
+font-size: 25px;
+padding-bottom: 20px;
+
+}
+footer .linkrs{
+    line-height: 1.9rem;
+}
+.linkrs li{
+    list-style: none;
+
+}
+.media h3{
+font-size: 20px;
+}
+.contact{
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 1.9rem;
+}
+.contact i:hover{
+    transform: scale(1.9);
+}
+.copy {
+    background-color: white;
+    text-align: center;
+    margin-top: 20px;
 }
 .last-icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .iconsv{
-    width:50px ;
-    height: 50px;
+    width:30px ;
+    height: 30px;
     /* border: 2px solid; */
     border-radius: 50%;
     display: flex;
@@ -239,8 +384,11 @@ border-radius: 5px;
     margin: 0px 20px;
 }
 .iconsv i{
-    font-size: 30px;
-    color: black;
+    font-size: 20px;
+    color: white;
+}
+.iconsv i:hover{
+  transform: scale(1.2);
 }
 
 
